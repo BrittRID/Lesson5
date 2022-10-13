@@ -1,37 +1,58 @@
-/* Lesson 5 */
 
-/* IF/ELSE IF */
 
 // This criterion is linked to a Learning OutcomeConditional Branching: if/else
 // Using the day of the week, from the JavaScript Date object, create 
 // if and else statements to print a message based on whether it is a weekday or weekend. 
 // Display this message in the HTML element with an ID of message1.
 // Step 1: Declare and initialize a new variable to hold the current date
-const currentDate = {};
-       
+//let date = new Date().toLocaleDateString()
+  const date = new Date();
 // Step 2: Declare another variable to hold the day of the week
-const dayOfWeek = {};
+  let dayOfWeek; 
 // Step 3: Using the variable declared in Step 1, assign the value of the variable declared in Step 2 to the day of the week ( hint: getDay() )
-currentDate = dayOfWeek.getDay();
+   dayOfWeek = date.getDay;
 // Step 4: Declare a variable to hold a message that will be displayed
-console.log("Message displayed")
+let holdMessage = "Weekend fun";
+console.log(`Hello, ${holdMessage}`); 
 // Step 5: Using an if statement, if the day of the week is a weekday (i.e. Monday - Friday), set the message variable to the string 'Hang in there!'
-if (currentDate > 6 ) {
-    console.log("Hang in there");
-}
-else 
-{
-    console.log("Woohoo!  It is the weekend!");
-}
 
+if(dayOfWeek == 0 && 6)
+{
+  console.log("Hang in there!");
+}
+else
+{
+  console.log("Woohoo! It is the weekend!");
+}
 // Step 6: Using an else statement, set the message variable to 'Woohoo!  It is the weekend!'
 
 /* SWITCH, CASE, BREAK */
 
 // Step 1: Declare a new variable to hold another message
-
+ const anotherMessage = {};
 // Step 2: Use switch, case and break to set the message variable to the day of the week as a string (e.g. Sunday, Monday, etc.) using the day of week variable declared in Step 2 above
-
+ switch (dayOfWeek) {
+     case 0:
+       day = "Sunday";
+       break;
+       case 1:
+       day = "Monday";
+       break;
+       case 2:
+        day = "Tuesday";
+       break;
+       case 3:
+       day = "Wednesday";
+       break;
+       case 4:
+       day = "Thursday";
+       break;
+       case 5:
+       day = "Friday";
+       break;
+       case 6:
+      day = "Saturday";
+   }
 /* OUTPUT */
 
 // Step 1: Assign the value of the first message variable to the HTML element with an ID of message1

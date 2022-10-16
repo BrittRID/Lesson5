@@ -5,63 +5,68 @@
 // if and else statements to print a message based on whether it is a weekday or weekend. 
 // Display this message in the HTML element with an ID of message1.
 // Step 1: Declare and initialize a new variable to hold the current date
-//let date = new Date().toLocaleDateString()
-  const date = new Date();
+  let date = new Date();
 // Step 2: Declare another variable to hold the day of the week
   let dayOfWeek; 
 // Step 3: Using the variable declared in Step 1, assign the value of the variable declared in Step 2 to the day of the week ( hint: getDay() )
-   dayOfWeek = date.getDay;
+   dayOfWeek = date.getDay();
 // Step 4: Declare a variable to hold a message that will be displayed
-let holdMessage = "Weekend fun";
-console.log(`Hello, ${holdMessage}`); 
+let holdMessage = "Hang in there";
 // Step 5: Using an if statement, if the day of the week is a weekday (i.e. Monday - Friday), set the message variable to the string 'Hang in there!'
-
-if(dayOfWeek == 0 && 6)
+let anotherMessage = "Woohoo!  It is the weekend!"
+//Message one will say hang in there for monday - friday 
+if(dayOfWeek >= 1 && dayOfWeek <= 5)
 {
-  console.log("Hang in there!");
+    console.log(holdMessage);
 }
-else
-{
-  console.log("Woohoo! It is the weekend!");
+else{
+    console.log(anotherMessage);
 }
 // Step 6: Using an else statement, set the message variable to 'Woohoo!  It is the weekend!'
 
 /* SWITCH, CASE, BREAK */
 
 // Step 1: Declare a new variable to hold another message
- const anotherMessage = {};
+ //let anotherMessage = "Hang in there"
 // Step 2: Use switch, case and break to set the message variable to the day of the week as a string (e.g. Sunday, Monday, etc.) using the day of week variable declared in Step 2 above
- switch (dayOfWeek) {
-     case 0:
-       day = "Sunday";
+
+switch (dayOfWeek) 
+ {
+       case 0:
+      dayOfWeek = "Sunday";
+      anotherMessage = "Hooray";
        break;
        case 1:
-       day = "Monday";
+       Monday = "Monday";
        break;
        case 2:
-        day = "Tuesday";
+        Tuesday = "Tuesday";
        break;
        case 3:
-       day = "Wednesday";
+       Wednesday = "Wednesday";
        break;
        case 4:
-       day = "Thursday";
+       Thursday = "Thursday";
        break;
        case 5:
-       day = "Friday";
+       Friday = "Friday";
        break;
        case 6:
-      day = "Saturday";
+      Saturday = "Saturday";
+      anotherMessage = "Hooray";
    }
 /* OUTPUT */
 
 // Step 1: Assign the value of the first message variable to the HTML element with an ID of message1
-
+document.getElementById("message1").innerHTML = dayOfWeek;
 // Step 2: Assign the value of the second message variable to the HTML element with an ID of message2
-
+document.getElementById("message2").innerHTML = anotherMessage;
 /* FETCH */
 // Step 1: Declare a global empty array variable to store a list of temples
-
+// let temples = new Array(ListTemples);
+// function (ListTemples){
+//   ListTemples.foreach()
+// }
 // Step 2: Declare a function named output that accepts a list of temples as an array argument and does the following for each temple:
 // - Creates an HTML <article> element
 // - Creates an HTML <h3> element and add the temple's templeName property to it
